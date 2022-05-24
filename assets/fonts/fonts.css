@@ -1,0 +1,36 @@
+@font-face { 
+    font-family: "Georgia";
+    src: url("./Georgia.woff2"); 
+    font-style: normal; 
+    font-weight: normal; 
+    }
+@font-face { 
+    font-family: "Georgia";
+    src: url("./Georgia-Bold.woff2"); 
+    font-style: bold; 
+    font-weight: bold; 
+    }
+@font-face { 
+    font-family: "Georgia";
+    src: url("./Georgia-Italic.woff2"); 
+    font-style: italic; 
+    font-weight: normal; 
+    }
+@font-face { 
+    font-family: "Arial";
+    src: url("./ArialMT.woff2"); 
+    font-style: normal; 
+    font-weight: normal; 
+    }
+@font-face { 
+    font-family: "Arial";
+    src: url("./Arial-BoldMT.woff2"); 
+    font-style: bold; 
+    font-weight: bold; 
+    }
+@font-face { 
+    font-family: "Arial";
+    src: url("./Arial-ItalicMT.woff2"); 
+    font-style: italic; 
+    font-weight: normal; 
+    }

@@ -1,0 +1,673 @@
+body {
+    background-color: #fff;
+}
+.main {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    font-family: Georgia, Arial;
+}
+.wrapper {
+    padding: 0 40px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    background: #fff;
+}
+.header__nav-item {
+    margin-right: 35px;
+    font-family: 'Arial';
+    font-size: 15px;
+}
+.header__nav-item:last-child {
+    margin-right: 0px;
+}
+.header__nav-item a {
+    color: #545454;
+    text-decoration: none;
+}
+
+.header__nav-item_is-active a {
+    color: #292929;
+    border-bottom: 3px solid #F1CDB3;
+}
+
+.header__nav-item a:hover {
+    color: #292929;
+}
+
+.header__logo-link {
+    text-decoration: none;
+}
+.header__nav {
+    align-items: center;
+    display: flex;
+}
+.header__logo {}
+
+.header__logo-title {
+    color: #545454;
+    font-size: 32px;
+    letter-spacing: .06em;
+    margin: 0 0 10px;
+}
+
+.header__logo-description {
+    font-family: 'Arial', 'Georgia';
+    font-size: 13px;
+    letter-spacing: .1em;
+    color: #292929;
+    margin: 0;
+}
+
+.header__nav-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.header__burger {
+    background: url(../../assets/icons/Burger-dark.svg) no-repeat;
+    width: 30px;
+    height: 22px;
+    border: none;
+    position: absolute;
+    top: 49px;
+    right: 52px;
+    display: none;
+    z-index: 60;
+    transition: 1s;
+}
+
+.header__burger_is-active {
+    transform: rotate(90deg);
+    transition: 1s;
+}
+
+.header__nav-mobile-background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(41, 41, 41, .6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.header__nav-mobile-background_is-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__nav-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #292929;
+    height: 100%;
+    width: 320px;
+    top: 0;
+    position: absolute;
+    z-index: 50;
+}
+
+
+.header__nav-mobile_is-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo-link_nav-mobile {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    text-decoration: none;
+}
+
+.header__logo-link_nav-mobile .header__logo-title {
+    color: #f1cdb3;
+}
+
+.header__logo-link_nav-mobile .header__logo-description {
+    color: #fff;
+}
+
+.header__nav-mobile-list {
+    padding: 0;
+    width: 276px;
+    list-style: none;
+    position: absolute;
+    top: 248px;
+}
+
+.header__nav-mobile-item {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.header__nav-mobile-item a {
+    color: #cdcdcd;
+    text-decoration: none;
+}
+
+.pets {
+    background-color: rgba(246, 246, 246, 1);
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pets__title {
+    max-width: 40%;
+    text-align: center;
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 400;
+    margin: 0 0 60px;
+    letter-spacing: .06em;
+}
+.pets__slider {
+    width: 100%;
+    position: relative;
+}
+.pets__slider-item {
+    width: 270px;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 9px;
+}
+.pets__slider-img {
+}
+.pets__slider-name {
+    margin: 30px auto;
+    font-size: 20px;
+    color: rgba(84, 84, 84, 1);
+    font-weight: 400;
+    letter-spacing: .06em;
+}
+.pets__slider-btn {
+    padding: 15px 45px;
+    font-size: 17px;
+    border: solid 2px #F1CDB3;
+    border-radius: 100px;
+    background-color: #fafafa;
+    margin-bottom: 30px;
+    letter-spacing: .06em;
+}
+
+.pets__slider-btn:hover {
+    background-color: #fddcc4;
+    cursor: pointer;
+}
+
+.pets__btn {
+    color: rgba(41, 41, 41, 1);
+    background-color: rgba(241, 205, 179, 1);
+    padding: 15px 45px;
+    border-radius: 100px;
+    border: none;
+    margin-top: 60px;
+    letter-spacing: .06em;
+}
+
+.pets__btn:hover {
+    background-color: #fddcc4;
+    cursor: pointer;
+}
+
+/* .slider__item_jen {
+    margin: 0 90px;
+} */
+
+.slider__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+}
+
+#slider-middle {
+    display: none;
+}
+
+#slider-small {
+    display: none;
+}
+
+.slider__item {
+    display: none;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.active {
+    display: flex;
+}
+
+.pets__control-btn {
+    border: 2px solid #f1cdb3;
+    border-radius: 100px;
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    background-image: url(../../assets/icons/Arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pets__control-btn:hover{
+    background-color: #fddcc4;
+    cursor: pointer;
+}
+
+.pets__control-btn_right {
+    position: absolute;
+    top: 43%;
+    right: 0;
+}
+
+.pets__control-btn_left {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 43%;
+}
+
+.pets__pagination {
+    margin-top: 45px;
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pets__pagination-button {
+    border: 2px solid #F1CDB3;
+    height: 52px;
+    width: 52px;
+    border-radius: 100px;
+    background: transparent;
+    font-size: 20px;
+    line-height: 19px;
+}
+
+.pets__pagination-button:hover {
+    background-color: #FDDCC4;
+    cursor: pointer;
+}
+
+.pets__pagination-button_inactive {
+    border: 2px solid #CDCDCD;
+    color: #cdcdcd;
+}
+
+.pets__pagination-button_inactive {
+    cursor: pointer;
+    background-color: transparent!important;
+}
+
+.pets__pagination-button_is-active {
+    background-color: #F1CDB3;
+}
+
+.footer {
+    display: flex;
+    background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,linear-gradient(0deg, #211F20, #211F20);
+    padding: 40px 40px 0;
+    justify-content: space-between;
+}
+.footer__block {
+    display: flex;
+    justify-content: space-between;
+    width: 58%;
+}
+.footer__img {
+}
+.footer__section {
+}
+.footer__section-title {
+    margin: 20px auto 0;
+    font-size: 35px;
+    color: #fff;
+    font-weight: 400;
+    font-family: georgia;
+    letter-spacing: 0.06rem;
+}
+.footer__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.footer__list-item {
+    margin-top: 46px;
+    display: flex;
+}
+.footer__ico {
+    margin-right: 20px;
+}
+.footer__link {
+    color: rgba(241, 205, 179, 1);
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    letter-spacing: .06em;
+}
+.pets-modal {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 700;
+    background-color: rgba(41, 41, 41, 0.6);
+}
+
+.pet-modal__close-btn:hover {
+    background-color: #fddcc4;
+}
+
+.pets-modal_isActive {
+    display: flex;
+}
+
+.pet-modal {
+    height: 500px;
+    width: 900px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+    border-radius: 9px;
+}
+
+.pet-modal__close-btn {
+    position: absolute;
+    background: url('../../assets/icons/close-btn.svg') no-repeat center;
+    top: -52px;
+    right: -52px;
+    height: 52px;
+    width: 52px;
+    border: 2px solid #f1cdb3;
+    border-radius: 100px;
+}
+
+.pet-modal__close-btn_hover {
+    background-color: #fddcc4;
+}
+
+.pet-modal__img {}
+
+.pet-modal__content {
+    margin: 50px 20px auto 29px;
+}
+
+.pet-modal__title {
+    font-size: 35px;
+    letter-spacing: .06em;
+    margin: 0;
+}
+
+.pet-modal__breed {
+    font-size: 20px;
+    letter-spacing: .06em;
+    margin: 10px 0 40px;
+}
+
+.pet-modal__about {
+    font-size: 15px;
+    letter-spacing: .06em;
+    margin: 0;
+}
+
+.pet-modal__chars {
+    margin: 40px 0 0;
+    padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pet-modal__char {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.pet-modal__char:last-child {
+    margin-bottom: 0;
+}
+
+.pet-modal__char::marker {
+    color: #f1cdb3;
+}
+
+.pet-modal__char-name {
+    display: inline;
+    font-weight: 700;
+    letter-spacing: .06em;
+}
+
+.pet-modal__char {
+    display: inline;
+    letter-spacing: .06em;
+}
+
+@media (max-width: 1250px) {
+    #slider-main {
+        display: none;
+    }
+    #slider-middle {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px 40px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .pet-modal {
+        height: 350px;
+        width: 630px;
+    }
+    .pet-modal__img {
+        width: 350px;
+        height: 350px;
+    }
+    .pet-modal__content {
+        margin: 10px 10px auto;
+    }
+    .pet-modal__breed {
+        margin: 10px 0 20px;
+    }
+    .pet-modal__about {
+        font-size: 13px;
+    }
+    .pet-modal__chars {
+        margin: 20px 0 0;
+    }
+}
+
+@media (max-width: 970px) {
+    .slider__item_freddie {
+        display: none;
+    }
+    
+    .slider__item_scarlet {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .header {
+        padding: 30px;
+        justify-content: flex-start;
+    }
+
+    .header__logo-link {
+        margin-right: 81px;
+    }
+
+    .pets {
+        padding-bottom: 70px;
+    }
+
+    .pets__title {
+        max-width: 100%;
+        margin: 0 0 30px;
+    }
+
+    .pets__slider-name {
+        margin: 25px auto 30px;
+    }
+    
+    .footer {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 95px 0 64px;
+    }
+
+    .footer__section-title {
+        margin: 0;
+    }
+
+    .footer__list-item:last-child {
+        margin-top: 28px;
+    }
+
+    .footer__list-item_phone {
+        margin-top: 51px!important;
+    }
+
+    .footer__block {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer__img {
+        margin-top: 65px;
+        margin-left: 21px;
+    }
+
+}
+
+@media (max-width: 760px) {
+    .pet-modal__img {
+        display: none;
+    }
+    .pet-modal {
+        height: auto;
+        width: 240px;
+    }
+    .pet-modal__content {
+        margin: 10px 10px 11px;
+    }
+    .pet-modal__title,.pet-modal__breed {
+        text-align: center;
+    }
+    .pet-modal__chars {
+        margin: 24px 0 0;
+    }
+}
+
+@media (max-width: 686px) {
+    .wrapper {
+        padding: 42px 10px;
+    }
+
+    .header {
+        padding: 30px 10px;
+    }
+
+    .header__logo-link {
+        margin: 0;
+    }
+
+    .header__nav-list {
+        display: none;
+    }
+    
+    .header__burger {
+        display: block;
+    }
+
+    .pets__title {
+        font-size: 25px;
+        line-height: 32px;
+        margin-bottom: 42px;
+    }
+
+    .slider__item_sophia, .slider__item_timmy, .slider__item_charly {
+        display: none;
+    }
+
+    .pets__pagination {
+        margin-top: 42px;
+        width: 300px;
+    }
+
+    .footer {
+        padding: 30px 10px 0;
+        flex-direction: column;
+    }
+
+    .footer__section {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__section-title {
+        font-size: 25px;
+        max-width: 278px;
+        text-align: center;
+    }
+
+    .footer__block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__list-item {
+        margin: 41px auto;
+    }
+
+    .footer__list-item:last-child {
+        margin: 41px auto;
+    }
+    
+    .footer__img {
+        margin: 0;
+        width: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    #slider-middle {
+        display: none;
+    }
+
+    #slider-small {
+        display: flex;
+    }
+
+    #slider-small .slider__item {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
