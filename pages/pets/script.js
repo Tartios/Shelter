@@ -18,13 +18,12 @@ function shuffle(arr) {
 	return arr;
 };
 
-const former = (pets, petsArray) => {
-    const shufflePets = shuffle(pets);
-    petsArray.push(shufflePets);
-    petsArray.length <= 5 ? former(pets, petsArray) : petsArray; 
+const former = (pets, petsArray, arrayLength) => {
+    petsArray.push(pets);
+    petsArray.length <= arrayLength ? former(pets, petsArray, arrayLength) : petsArray; 
 };
 
-former(pets, petsArray);
+former(pets, petsArray, 5);
 
 let cardOnSliderIndex = 0;// индекс слайда
 const newCardGenerator = (pets, slideLength, petsArray) => {//наполняет массив карточек для слайдера
@@ -69,6 +68,7 @@ petsArray.forEach((itemArr, index) => {
     const slideTemplate = document.querySelector('#slide-template').content.querySelector('.slider__item').cloneNode(true);
     slideTemplate.setAttribute('id', cardsContainerMain.id + '-' + index);
     cardsContainerMain.append(slideTemplate);
+    shuffle(itemArr);
     itemArr.forEach((item) => {
         const cardTemplate = document.querySelector('#card-template').content.querySelector('.pets__slider-item').cloneNode(true);
         const card = cardTemplate;
